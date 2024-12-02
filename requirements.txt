@@ -1,0 +1,6 @@
+Flask
+requests
+python-dotenv
+Jinja2
+pandas
+scikit-learn
