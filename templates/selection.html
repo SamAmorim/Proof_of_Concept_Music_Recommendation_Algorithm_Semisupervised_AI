@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 {% extends 'base.html' %}
 
 {% block page_title %}
@@ -49,6 +50,58 @@ Selection
 
 {% block page_scripts %}
 <script async defer src="{{ url_for('static', filename='js/selection.js') }}"></script>
+=======
+{% extends 'base.html' %}
+
+{% block page_title %}
+Selection
+{% endblock page_title %}
+
+{% block main %}
+<div class="container-fluid d-flex flex-column gap-4 align-items-center">
+    <div class="col-4 d-flex gap-4 flex-column">
+        <h5 class="text-center">
+            Selecione as músicas que você mais gosta.
+        </h1>
+        <div class="input-group">
+            <input type="text" class="form-control form-control-lg" placeholder="Pesquise aqui..." id="search-input">
+            <button class="btn btn-lg btn-primary" type="button" id="search-button">
+                <img src="{{ url_for('static', filename='img/icons8-pesquisar-60.png') }}" style="width: 1.5rem;">
+            </button>
+          </div>
+        <form class="container-fluid d-flex flex-column gap-2 g-0" id="track-list">
+
+            <!-- Track component -->
+            <div id="track-component" style="display: none;">
+                <input type="checkbox" class="btn-check" id="track-button" autocomplete="off">
+                <label class="card btn" for="track-button" id="track-card">
+                    <div class="row g-0">
+                        <div class="col-1 d-flex align-items-center justify-content-center">
+                            <input class="form-check form-check-input rounded-circle" style="width: 2rem; height: 2rem;" type="checkbox" value="" id="track-checkbox">
+                        </div>
+                        <div class="col-11 text-start">
+                            <div class="card-body">
+                                <p class="card-title fw-bolder fs-5" id="track-name"></p>
+                                <p class="card-text" id="track-artist"></p>
+                            </div>
+                        </div>
+                    </div>
+                </label>
+            </div>
+        </form>
+        <button class="btn btn-lg btn-primary" style="display: none;" type="button" id="load-more">
+            Carregar mais
+        </button>
+        <button class="btn btn-lg btn-primary mb-3" type="button" id="continue-button">
+            Continuar
+        </button>
+    </div>
+</div>
+{% endblock %}
+
+{% block page_scripts %}
+<script async defer src="{{ url_for('static', filename='js/selection.js') }}"></script>
+>>>>>>> 1614e33f342b5494521a4c63a3f5d7a250dad327
 =======
 {% extends 'base.html' %}
 
